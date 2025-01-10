@@ -1,35 +1,116 @@
-# Todo List
+# 📝 Todo List Application (Fullstack)
 
-This is a todo list application built with Express.js, MySQL, and React.js. It allows users to perform CRUD operations on their tasks.
+A fullstack application for managing tasks, featuring a **React.js** frontend and **Express.js** backend with **MySQL** as the database solution. This project supports complete task management functionality, including task creation, retrieval, updates, and deletion.
 
-## Features
+---
 
-- Create new tasks
-- Read existing tasks
-- Update task details
-- Delete tasks
+## 🚀 Features
 
-## Getting Started
+### Frontend
 
-To get started with the Todo List application, follow these steps:
+- Built with **React.js**
+- Routing handled by **React Router**
+- Task management API integration using **Axios**
+- Styled using **Bulma CSS**
 
-1. Clone our repo `https://github.com/aurelioo29/todo-list.git`
-2. Install the dependencies for the backend: `cd backend && npm install`
-3. Configure the database connection in `backend/config.js`
-4. Start the backend server: `npm start`
-6. Install the dependencies for the frontend: `cd ../frontend && npm install`
-7. Start the frontend development server: `npm start`
-7. Open your browser and navigate to `http://localhost:3000` to access the Todo List application.
+### Backend
 
-## Usage
+- RESTful API built with **Express.js**
+- **MySQL** for persistent data storage
+- **Sequelize ORM** for database management
+- CORS enabled for secure cross-origin requests
 
-Once you have the application up and running, you can start managing your tasks by performing the following actions:
+---
 
-- Create a new task by clicking on the "Add Task" button and filling in the details.
-- View your existing tasks in the list displayed on the homepage.
-- Update a task's details by clicking on the "Edit" button next to the task.
-- Delete a task by clicking on the "Delete" button next to the task.
+## 📂 Project Structure
 
-## Contributing
+```bash
+/todo-list-app
+├── frontend/
+│ ├── public/       # Static files
+│ ├── src/          # Frontend logic and components
+│ ├── package.json  # Frontend dependencies and scripts
+│ └── README.md     # Frontend documentation
+├── backend/
+│ ├── models/       # Sequelize models
+│ ├── routes/       # API routes
+│ ├── index.js      # Main server file
+│ ├── package.json  # Backend dependencies and scripts
+│ └── README.md     # Backend documentation
+└── README.md       # Project documentation
+```
 
-Contributions are welcome! If you have any ideas or suggestions to improve this project, feel free to open an issue or submit a pull request.
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js**: v14 or later
+- **MySQL**: Ensure MySQL is installed and running
+
+---
+
+### Backend Setup
+
+1. Navigate to the backend directory:
+
+   ```bash
+   cd backend
+   ```
+
+2. Install backend dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the backend server:
+
+   ```bash
+   npm start
+   ```
+
+The backend server will run at http://localhost:5000.
+
+---
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+
+   ```bash
+   cd frontend
+   ```
+
+2. Install frontend dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the frontend server:
+
+   ```bash
+   npm run dev
+   ```
+
+The frontend will run at http://localhost:3000.
+
+## 🌟 API Endpoints
+
+| **Method** | **Endpoint** | **Description**     |
+| ---------- | ------------ | ------------------- |
+| `GET`      | `/lists`     | Retrieve all tasks  |
+| `GET`      | `/lists/:id` | Retrieve task by ID |
+| `POST`     | `/lists`     | Create a new task   |
+| `PATCH`    | `/lists/:id` | Update task details |
+| `DELETE`   | `/lists/:id` | Delete a task by ID |
+
+## 🤝 Contributions
+
+Contributions are welcome! Fork this repository, make changes, and submit a pull request.
+
+---
+
+Developed with ❤️ by **Aurelio**.
